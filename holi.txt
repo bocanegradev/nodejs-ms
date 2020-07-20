@@ -1,0 +1,10 @@
+npm init -y
+npm install twilio
+----codigo
+node index.js
+
+
+----------------------
+
+crear archivo .env para variables sensibles
+npm install dotenv
