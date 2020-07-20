@@ -1,10 +1,9 @@
-document.getElementById("linkActivo").addEventListener("click", enviarMensajeWA);
+// document.getElementById("linkActivo").addEventListener("click", enviarMensajeWA);
 
+require('dotenv').config();
 const twilio = require('twilio');
-const client = twilio(
-    'ACc849fc680689dc89a03c028b13051f0a',
-    '93f6f7216918413cce222abfde868aee'
-);
+console.log();
+const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 // client.messages.create({
 //     to: 'whatsapp:+573506854921',
@@ -37,6 +36,9 @@ function enviarMensajeWA() {
             console.log(err)
         });
 }
+enviarMensajeWA();
+
+
 // require('dotev').config();
 
 // const accSID = process.env.ACCOUNT_SID;
